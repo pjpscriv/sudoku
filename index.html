@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sudoku</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Sudoku">
+  <meta name="author"      content="pjpscriv">
+  <meta name="viewport"    content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="pretty.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<body>
+
+  <header>
+    <i class="fas fa-user-alt-slash fa-lg"></i>
+    <h1>Sudoku</h1>
+    <i id='settings' class="fas fa-cog fa-lg"></i>
+  </header>
+
+  <div class="game">
+      <div class="row row1">
+          <input type="number" class="x1 y9 b1" pattern="\d*" maxlength="1">
+          <input type="number" class="x2 y9 b1" pattern="\d*" maxlength="1">
+          <input type="number" class="x3 y9 b1" pattern="\d*" maxlength="1">
+          <input type="number" class="x4 y9 b2" pattern="\d*" maxlength="1">
+          <input type="number" class="x5 y9 b2" pattern="\d*" maxlength="1">
+          <input type="number" class="x6 y9 b2" pattern="\d*" maxlength="1">
+          <input type="number" class="x7 y9 b3" pattern="\d*" maxlength="1">
+          <input type="number" class="x8 y9 b3" pattern="\d*" maxlength="1">
+          <input type="number" class="x9 y9 b3" pattern="\d*" maxlength="1">
+      </div>
+      <div class="row row2">
+          <input type="number" class="x1 y8 b1" pattern="\d*" maxlength="1">
+          <input type="number" class="x2 y8 b1" pattern="\d*" maxlength="1">
+          <input type="number" class="x3 y8 b1" pattern="\d*" maxlength="1">
+          <input type="number" class="x4 y8 b2" pattern="\d*" maxlength="1">
+          <input type="number" class="x5 y8 b2" pattern="\d*" maxlength="1">
+          <input type="number" class="x6 y8 b2" pattern="\d*" maxlength="1">
+          <input type="number" class="x7 y8 b3" pattern="\d*" maxlength="1">
+          <input type="number" class="x8 y8 b3" pattern="\d*" maxlength="1">
+          <input type="number" class="x9 y8 b3" pattern="\d*" maxlength="1">
+      </div>
+      <div class="row row3">
+          <input type="number" class="x1 y7 b1" pattern="\d*" maxlength="1">
+          <input type="number" class="x2 y7 b1" pattern="\d*" maxlength="1">
+          <input type="number" class="x3 y7 b1" pattern="\d*" maxlength="1">
+          <input type="number" class="x4 y7 b2" pattern="\d*" maxlength="1">
+          <input type="number" class="x5 y7 b2" pattern="\d*" maxlength="1">
+          <input type="number" class="x6 y7 b2" pattern="\d*" maxlength="1">
+          <input type="number" class="x7 y7 b3" pattern="\d*" maxlength="1">
+          <input type="number" class="x8 y7 b3" pattern="\d*" maxlength="1">
+          <input type="number" class="x9 y7 b3" pattern="\d*" maxlength="1">
+      </div>
+      <div class="row row4">
+          <input type="number" class="x1 y6 b4" pattern="\d*" maxlength="1">
+          <input type="number" class="x2 y6 b4" pattern="\d*" maxlength="1">
+          <input type="number" class="x3 y6 b4" pattern="\d*" maxlength="1">
+          <input type="number" class="x4 y6 b5" pattern="\d*" maxlength="1">
+          <input type="number" class="x5 y6 b5" pattern="\d*" maxlength="1">
+          <input type="number" class="x6 y6 b5" pattern="\d*" maxlength="1">
+          <input type="number" class="x7 y6 b6" pattern="\d*" maxlength="1">
+          <input type="number" class="x8 y6 b6" pattern="\d*" maxlength="1">
+          <input type="number" class="x9 y6 b6" pattern="\d*" maxlength="1">
+      </div>
+      <div class="row row5">
+          <input type="number" class="x1 y5 b4" pattern="\d*" maxlength="1">
+          <input type="number" class="x2 y5 b4" pattern="\d*" maxlength="1">
+          <input type="number" class="x3 y5 b4" pattern="\d*" maxlength="1">
+          <input type="number" class="x4 y5 b5" pattern="\d*" maxlength="1">
+          <input type="number" class="x5 y5 b5" pattern="\d*" maxlength="1">
+          <input type="number" class="x6 y5 b5" pattern="\d*" maxlength="1">
+          <input type="number" class="x7 y5 b6" pattern="\d*" maxlength="1">
+          <input type="number" class="x8 y5 b6" pattern="\d*" maxlength="1">
+          <input type="number" class="x9 y5 b6" pattern="\d*" maxlength="1">
+      </div>
+      <div class="row row6">
+          <input type="number" class="x1 y4 b4" pattern="\d*" maxlength="1">
+          <input type="number" class="x2 y4 b4" pattern="\d*" maxlength="1">
+          <input type="number" class="x3 y4 b4" pattern="\d*" maxlength="1">
+          <input type="number" class="x4 y4 b5" pattern="\d*" maxlength="1">
+          <input type="number" class="x5 y4 b5" pattern="\d*" maxlength="1">
+          <input type="number" class="x6 y4 b5" pattern="\d*" maxlength="1">
+          <input type="number" class="x7 y4 b6" pattern="\d*" maxlength="1">
+          <input type="number" class="x8 y4 b6" pattern="\d*" maxlength="1">
+          <input type="number" class="x9 y4 b6" pattern="\d*" maxlength="1">
+      </div>
+      <div class="row row7">
+          <input type="number" class="x1 y3 b7" pattern="\d*" maxlength="1">
+          <input type="number" class="x2 y3 b7" pattern="\d*" maxlength="1">
+          <input type="number" class="x3 y3 b7" pattern="\d*" maxlength="1">
+          <input type="number" class="x4 y3 b8" pattern="\d*" maxlength="1">
+          <input type="number" class="x5 y3 b8" pattern="\d*" maxlength="1">
+          <input type="number" class="x6 y3 b8" pattern="\d*" maxlength="1">
+          <input type="number" class="x7 y3 b9" pattern="\d*" maxlength="1">
+          <input type="number" class="x8 y3 b9" pattern="\d*" maxlength="1">
+          <input type="number" class="x9 y3 b9" pattern="\d*" maxlength="1">
+      </div>
+      <div class="row row8">
+          <input type="number" class="x1 y2 b7" pattern="\d*" maxlength="1">
+          <input type="number" class="x2 y2 b7" pattern="\d*" maxlength="1">
+          <input type="number" class="x3 y2 b7" pattern="\d*" maxlength="1">
+          <input type="number" class="x4 y2 b8" pattern="\d*" maxlength="1">
+          <input type="number" class="x5 y2 b8" pattern="\d*" maxlength="1">
+          <input type="number" class="x6 y2 b8" pattern="\d*" maxlength="1">
+          <input type="number" class="x7 y2 b9" pattern="\d*" maxlength="1">
+          <input type="number" class="x8 y2 b9" pattern="\d*" maxlength="1">
+          <input type="number" class="x9 y2 b9" pattern="\d*" maxlength="1">
+      </div>
+      <div class="row row9">
+          <input type="number" class="x1 y1 b7" pattern="\d*" maxlength="1">
+          <input type="number" class="x2 y1 b7" pattern="\d*" maxlength="1">
+          <input type="number" class="x3 y1 b7" pattern="\d*" maxlength="1">
+          <input type="number" class="x4 y1 b8" pattern="\d*" maxlength="1">
+          <input type="number" class="x5 y1 b8" pattern="\d*" maxlength="1">
+          <input type="number" class="x6 y1 b8" pattern="\d*" maxlength="1">
+          <input type="number" class="x7 y1 b9" pattern="\d*" maxlength="1">
+          <input type="number" class="x8 y1 b9" pattern="\d*" maxlength="1">
+          <input type="number" class="x9 y1 b9" pattern="\d*" maxlength="1">
+          <!-- 
+          <div class="hello" style="background-color: red; width: 50px; height: 50px;"></div>
+          <div class="hello" style="background-color: red; width: 50px; height: 50px;"></div> -->
+      </div>
+  </div>
+
+  <div class="numbers">
+    <div class="num-buttons">
+      <p class='but-pencil'><i class="fas fa-pencil-alt fa-xs"></i></p>
+      <p class='but-1'>1</p>
+      <p class='but-2'>2</p>
+      <p class='but-3'>3</p>
+      <p class='but-4'>4</p>
+      <p class='but-5'>5</p>
+      <p class='but-6'>6</p>
+      <p class='but-7'>7</p>
+      <p class='but-8'>8</p>
+      <p class='but-9'>9</p>
+      <p class='but-del'><i class="fas fa-backspace fa-xs"></i></p>
+    </div>
+  </div>
+
+  <div id='settings-modal' class='modal-background'>
+    <div class='modal'>
+      <span class='close-button'>&times;</span>
+      <p>Test text.</p>
+    </div>
+  </div>
+
+</body>
+
+<!-- <script type="text/javascript" src="../resources/jquery-2.1.4.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" 
+  type="text/javascript"></script>
+<script type="text/javascript" src="gameplay.js"></script>
+<script type="text/javascript" src="settings.js"></script>
+
+</html>
